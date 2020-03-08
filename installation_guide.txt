@@ -1,0 +1,7 @@
+Run commands in smurfs folder [Client]
+-----------------------------
+npm install redux --save
+npm install react-redux --save
+npm install redux-thunk --save
+
+npm install axios --save

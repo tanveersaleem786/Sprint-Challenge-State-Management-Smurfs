@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import "./smurfs.css";
 
 export const AddSmurf = (props) => {
 
@@ -14,35 +15,46 @@ export const AddSmurf = (props) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-          <label>
-            Name:
+     <div className="container"> 
+      
+       <div className="w3-container w3-orange">
+        <h2>Add Smurfs</h2>
+       </div>
+    
+        <form className="w3-container" onSubmit={handleSubmit}>
+    
+          <p>
             <input
+              className="w3-input"
               name="name"
               type="text"
               value={newSmurf.name}
               onChange={handleChange} />
-          </label>
-          <br />
-          <label>
-            Age:
+            <label>Name:</label>
+         </p> 
+         <p>         
             <input
+              className="w3-input"
               name="age"
               type="number"
               value={newSmurf.age}
               onChange={handleChange} />
-          </label>
-          <br />
-          <label>
-            Height:
+           <label>Age:</label>
+          </p>
+          <p>          
             <input
+              className="w3-input"
               name="height"
               type="text"
               value={newSmurf.height}
               onChange={handleChange} />
-          </label>
-          <input type="submit" value="Submit" />
+          <label>Height:</label>
+          </p>
+          <input type="submit" value="Submit" class="w3-btn w3-orange" />
+          
         </form>
+        </div>
       );
 
 }
+

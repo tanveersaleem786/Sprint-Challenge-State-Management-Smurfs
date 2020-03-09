@@ -12,7 +12,7 @@ export const getSmurfs = () => dispatch => {
     dispatch({type: START_API_CALL});
 
     axios
-    .get("http://localhost:3333/smurfs")
+    .get("http://localhost:3334/smurfs")
     .then(res => {
         //console.log(res);
         dispatch({type: LIST_SMURF_SUCCESS, payload: res.data});
@@ -32,7 +32,7 @@ export const addSmurf = (smurf) => dispatch => {
     dispatch({type: START_API_CALL});
     console.log(smurf);
     axios
-    .post("http://localhost:3333/smurfs", smurf)
+    .post("http://localhost:3334/smurfs", smurf)
     .then(res => {
         //console.log(res);
         dispatch({type: ADD_SMURF_SUCCESS, payload: smurf});
@@ -52,7 +52,7 @@ export const deleteSmurf = (smurf) => dispatch => {
     dispatch({type: START_API_CALL});
     console.log(smurf);
     axios
-    .delete(`http://localhost:3333/smurfs/${smurf.id}`)
+    .delete(`http://localhost:3334/smurfs/${smurf.id}`)
     .then(res => {
         //console.log(res);
         dispatch({type: DELETE_SMURF_SUCCESS, payload: smurf});

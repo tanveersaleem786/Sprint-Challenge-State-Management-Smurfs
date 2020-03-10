@@ -15,10 +15,8 @@ function  App(props) {
     <div className="App">
       <h1>SMURFS! 2.0 W/ Redux</h1>
       <AddSmurf addSmurf={props.addSmurf}/>
-      <div>
-      {props.apiData.map((smurf, index) => (
-        <ListSmurfs key={index} smurf={smurf} deleteSmurf={props.deleteSmurf} />
-      ))}
+      <div>    
+      <ListSmurfs  smurfs={props.apiData} deleteSmurf={props.deleteSmurf} />
       </div>
     </div>
   );
